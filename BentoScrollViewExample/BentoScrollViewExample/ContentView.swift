@@ -34,6 +34,7 @@ struct BentoScrollPreviewView: View {
                 .padding(.vertical, 10)
                 .padding(.horizontal, 12)
             }
+            
             VStack(alignment: .leading) {
                 Text("Rainy conditions from 04:00-07:00, with windy conditions expected at 10:00.")
                 Divider()
@@ -97,30 +98,30 @@ struct BentoScrollPreviewView: View {
             .bentoSetionHeaderDisplayMode(mode: .permanent)
 
             // TODO: Bento box
-//            HStack {
-//                VStack {
-//                    Text("5")
-//                    Text("Moderate")
-//                    Capsule()
-//                        .fill(
-//                            LinearGradient(
-//                                colors: [
-//                                    Color.green,
-//                                    Color.yellow,
-//                                    Color.orange,
-//                                    Color.red,
-//                                    Color.pink,
-//                                    Color.purple
-//                                ],
-//                                startPoint: .leading,
-//                                endPoint: .trailing
-//                            )
-//                        )
-//                        .frame(height: 6)
-//                    
-//                    Text("Use sun protection until 17:00")
-//                }
-//            }
+            HStack {
+                VStack(alignment: .leading) {
+                    Text("5")
+                    Text("Moderate")
+                    Capsule()
+                        .fill(
+                            LinearGradient(
+                                colors: [
+                                    Color.green,
+                                    Color.yellow,
+                                    Color.orange,
+                                    Color.red,
+                                    Color.pink,
+                                    Color.purple
+                                ],
+                                startPoint: .leading,
+                                endPoint: .trailing
+                            )
+                        )
+                        .frame(height: 6)
+                    
+                    Text("Use sun protection until 17:00")
+                }
+            }
             
             
         } header: { headerHeight in

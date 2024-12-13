@@ -28,7 +28,7 @@ struct ScrollTopDetector: ViewModifier {
 
 extension View {
     @MainActor @ViewBuilder
-    public func scrollTop(top: Binding<CGFloat>) -> some View {
+    func scrollTop(top: Binding<CGFloat>) -> some View {
         modifier(ScrollTopDetector(top: top))
     }
 }

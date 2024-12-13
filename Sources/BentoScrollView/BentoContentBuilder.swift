@@ -21,9 +21,22 @@ public struct BentoContentBuilder {
         }
     }
     
+    public static func buildBlock<Content: View>(_ components: Content...) -> [BentoContent] {
+        components.map {
+            return BentoContent(
+                content: AnyView($0),
+                header: nil
+            )
+        }
+    }
+    
     public static func buildExpression<Content: View>(_ expression: Content) -> BentoScrollViewSection {
         return BentoScrollViewSection {
             expression
         }
+    }
+    
+    public static func buildExpression(_ expression: BentoScrollViewSection) -> BentoScrollViewSection {
+        return expression
     }
 }

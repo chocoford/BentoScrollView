@@ -140,11 +140,11 @@ internal struct BentoScrollSectionView: View {
                                         Gradient.Stop(color: Color.white, location: 0.0),
                                         Gradient.Stop(
                                             color: Color.white.opacity(1.0),
-                                            location: max(0, min(1, displayHeight / containerHeight) - 2 * 1e-5)
+                                            location: max(0, min(1, displayHeight / containerHeight) - 1.01 * 1e-6)
                                         ),
                                         Gradient.Stop(
                                             color: Color.white.opacity(1 - opacity),
-                                            location: max(1e-5, min(1, displayHeight / containerHeight) - 1e-5)
+                                            location: max(1e-5, min(1, displayHeight / containerHeight) - 1e-6)
                                         ),
                                         Gradient.Stop(
                                             color: Color.white.opacity(1 - opacity),
@@ -156,7 +156,7 @@ internal struct BentoScrollSectionView: View {
                                 )
                             )
                             .opacity(1-1e-6)
-                            .frame(height: max(0, size.height - headerOffsetY))
+                            .frame(height: max(0, containerHeight))
                     } else {
                         maskShape
                             .opacity(1-1e-6)
